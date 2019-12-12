@@ -1,0 +1,17 @@
+<div class="container">
+  <h4>Your adventure starts here! Create an Book and you will have all of your travel plans organized in one place.</h4>
+</div>
+
+<div class="price">
+    <img src="/images/croatiabridge.jpg" />
+    <p>The Book gives travelers and sightseers the ability to create multiple itineraries for their upcoming trips and getaways. Users can add the destinations, a detailed traveled guide, and the schedule for each of their itineraries. If you access the index page, you will be able to view all of the user itineraries.</p>
+</div>
+
+<% if !logged_in? %>
+<div class="account">
+  <h3>
+    <a href="/signup">Sign Up</a>
+    <a href="/login">Log In</a>
+  </h3>
+</div>
+<% end
