@@ -3,6 +3,7 @@ class CreateCupcakeTable < ActiveRecord::Migration
       create_table :cupcakes do |t|
          t.string :name
          t.string :price
+         t.integer :user_id
       end
    end
 end

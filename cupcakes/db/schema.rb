@@ -14,8 +14,15 @@
 ActiveRecord::Schema.define(version: 20191212164846) do
 
   create_table "cupcakes", force: :cascade do |t|
+    t.string  "name"
+    t.string  "price"
+    t.integer "user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "price"
+    t.string "username"
+    t.string "password_digest"
   end
 
 end

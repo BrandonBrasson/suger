@@ -14,12 +14,15 @@ class CupcakesController < ApplicationController
      erb :"cupcakes/show"
   end
 
-  post "/cupcakes" do
-      cupcake = Cupcake.create(params[:cupcake])
-      redirect '/cupcakess/#{cupcake.id}'
-  end
   get "/cupcakes/:id/edit" do
       @cupcake = cupcake.find(params[:id])
       erb :"cupcakes/edit"
   end
+  
+  post "/cupcakes" do
+      cupcake = Cupcake.create(params[:cupcake])
+      redirect '/cupcakess/#{cupcake.id}'
+  end
+
+
 end

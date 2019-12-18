@@ -17,7 +17,7 @@ class UserController < ApplicationController
       session[:user_id] = @user.id
       redirect "/cupcakes"
     else
-      flash[:message] = "Login credentials not found, please try again or sign up"
+      flash[:message] = "Login or sign up"
       redirect '/login'
     end
   end
@@ -39,12 +39,12 @@ class UserController < ApplicationController
       session[:user_id] = @user.id
       redirect "/cupcakes"
     else
-      flash[:message] = "Please fill out all signup information, or pick a different username"
+      flash[:message] = "  signup information, or use  different username"
       redirect to '/signup'
     end
   end
 
-  get '/users/:id/bookmarks' do
+  get '/users/:id/deletes' do
     redirect_if_not_logged_in
 
     @user = User.find_by_id(params[:id])

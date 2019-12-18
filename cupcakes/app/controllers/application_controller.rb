@@ -47,7 +47,7 @@ class ApplicationController < Sinatra::Base
 
       def redirect_if_not_creator(cupcake)
         if current_user.id != cupcake.user_id
-          flash[:message] = "You are not able to edit a cupcake you have not created."
+          flash[:message] = "get your cupcakes here"
           redirect "/cupcakes/#{cupcake.id}"
         end
 
