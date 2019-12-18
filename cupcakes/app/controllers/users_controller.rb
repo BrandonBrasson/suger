@@ -24,7 +24,7 @@ class UserController < ApplicationController
 
   get '/signup' do
     if is_logged_in?
-      @user = current_user #just reference current user instead of setting instanc evariable
+      @user = current_user
       redirect "/cupcakes"
     else
       erb :'users/signup'
