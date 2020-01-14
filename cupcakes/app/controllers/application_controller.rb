@@ -11,5 +11,14 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
-  
+  post '/sessions' do
+
+      redirect '/users/welcome'
+    end
+
+    get '/sessions/logout' do
+
+      redirect '/'
+    end
+
   end
