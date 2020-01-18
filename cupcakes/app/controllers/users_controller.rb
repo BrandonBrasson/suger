@@ -25,6 +25,16 @@ get "/users/:id" do
   erb :show
 end
 
+
+  get '/signup' do
+    if is_logged_in?
+      @user = username
+      redirect "/cupcakes"
+    else
+      erb :signup
+    end
+  end
+
 post '/signup' do
   @user = User.create(params[:user])
     session[:name] = @user.username

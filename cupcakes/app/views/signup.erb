@@ -1,9 +1,12 @@
-
 <h1>sign up below</h1>
 
-
 <form method="post" action="/signup">
-  <p>Username: <input type="text" id="username" name="username"></p>
-  <p>Password: <input type="text" id="text" name="password"></p>
+<label for="user[username]">Username:<br>
+  <input type="text" name="user[username]">
+</label><br>
+<label for="user[password]">Password:<br>
+  <input type="password" name="user[password]">
+</label><br>
+
   <input type="submit" id="submit" value="Sign Up">
 </form>
