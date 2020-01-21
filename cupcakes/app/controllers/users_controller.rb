@@ -27,9 +27,10 @@ end
 
 
   get '/signup' do
-    if is_logged_in?
+   user = User.find_by(username: params[:username])
+if user && user.authenticate(params[:password])
       @user = username
-      redirect "/cupcakes"
+      redirect "/login"
     else
       erb :signup
     end
