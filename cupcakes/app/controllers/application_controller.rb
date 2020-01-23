@@ -11,14 +11,14 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
-  post '/sessions' do
 
-      redirect '/users/welcome'
-    end
 
-    get '/sessions/logout' do
-
-      redirect '/'
-    end
+  get '/sessions/logout' do
+    session.clear
+    redirect '/'
+  end
 
   end
+  #Add <label>s to the inputs of your sign up form
+  #Redirect the user once they've successfully signed up
+  #Add a logout route that clears the user's session
